@@ -1,0 +1,110 @@
+@use "../foundation";
+
+/*=====================================================
+# header
+===================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #fff;
+  height: 72px;
+  @include foundation.mq(sm) {
+    height: 52px;
+  }
+  @include foundation.mq(tab) {
+    height: 52px;
+  }
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include foundation.mq(pc) {
+    margin: 0 40px;
+  }
+  @include foundation.mq(tab) {
+    margin: 0 20px;
+  }
+  @include foundation.mq(sm) {
+    margin: 0 20px;
+  }
+}
+.header-logo {
+  @include foundation.mq(sm) {
+    margin-top: 20px;
+  }
+  @include foundation.mq(tab) {
+    margin-top: 20px;
+  }
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+  @include foundation.mq(sm) {
+    display: block;
+  }
+  @include foundation.mq(tab) {
+    display: block;
+  }
+}
+.header-nav-list {
+  display: flex;
+  @include foundation.mq(sm) {
+    display: block;
+  }
+  @include foundation.mq(tab) {
+    display: block;
+  }
+  .header-nav-item-link {
+    line-height: 72px;
+    margin-left: 16px;
+    font-weight: 700;
+    @include foundation.mq(sm) {
+      margin-left: 107px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.header-btn {
+  margin-left: 14px;
+  @include foundation.mq(sm) {
+    text-align: center;
+  }
+  a {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #64629d;
+    border-radius: 25px;
+    color: #fff;
+    transition: 0.3s;
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+}
+.drawer-nav {
+  @include foundation.mq(sm) {
+    background: #edecfc;
+    top: 52px;
+  }
+  @include foundation.mq(tab) {
+    background: #edecfc;
+    top: 52px;
+  }
+}
+main {
+  margin-top: 72px;
+  @include foundation.mq(sm) {
+    margin-top: 52px;
+  }
+  @include foundation.mq(tab) {
+    margin-top: 52px;
+  }
+}

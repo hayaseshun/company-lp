@@ -1,0 +1,17 @@
+$breakpoints: (
+  //キー値
+  "sm": "screen and (max-width: 560px)",
+  //560px以下（スマホ）用の表示
+  "tab": "screen and (min-width: 561px) and (max-width: 960px)",
+  //959px以下（タブレット）用の表示
+  "pc": "screen and (min-width: 961px) and (max-width: 1280px)",
+  //959px以下（タブレット）用の表示
+  "md": "screen and (min-width: 1281px)" //960px以上（PC）用の表示
+) !default;
+
+//メディアクエリー
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

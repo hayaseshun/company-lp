@@ -1,0 +1,63 @@
+@use "../foundation";
+
+/*=====================================================
+# footer
+===================================================== */
+.footer {
+  background: #000000;
+  padding: 60px 0 27px;
+  color: #fff;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @include foundation.mq(sm) {
+    display: block;
+    text-align: center;
+  }
+  @include foundation.mq(tab) {
+    margin: 0 20px;
+  }
+  @include foundation.mq(pc) {
+    margin: 0 20px;
+  }
+}
+.footer-left {
+  .footer-logo {
+    margin-bottom: 19px;
+  }
+  .footer-menu {
+    margin-bottom: 19px;
+    display: flex;
+    @include foundation.mq(sm) {
+      display: block;
+    }
+    .footer-menu-item {
+      &:not(:first-child) {
+        margin-left: 14px;
+      }
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+.footer-right {
+  margin-top: 20px;
+  .footer-sns-title {
+    margin-bottom: 12px;
+  }
+  .footer-sns-list {
+    display: flex;
+    @include foundation.mq(sm) {
+      justify-content: center;
+    }
+    .footer-sns-item {
+      &:not(:first-child) {
+        margin-left: 18px;
+      }
+    }
+  }
+}
